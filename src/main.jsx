@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './styles.css'
 import './mobile.css'
+import './theme.css'
 import { registerServiceWorker } from './pwa.js'
 
 registerServiceWorker()

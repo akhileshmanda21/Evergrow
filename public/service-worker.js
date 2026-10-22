@@ -1,12 +1,12 @@
-const CACHE_NAME = 'evergrow-shell-v1'
+const CACHE_NAME = 'riseo-shell-v2'
 const APP_ROOT = new URL('.', self.location.href).href
 const SHELL_FILES = [
   APP_ROOT,
   new URL('manifest.webmanifest', APP_ROOT).href,
-  new URL('evergrow-icon.svg', APP_ROOT).href,
-  new URL('evergrow-192.png', APP_ROOT).href,
-  new URL('evergrow-512.png', APP_ROOT).href,
-  new URL('apple-touch-icon.png', APP_ROOT).href,
+  new URL('riseo-icon.svg', APP_ROOT).href,
+  new URL('riseo-192.png', APP_ROOT).href,
+  new URL('riseo-512.png', APP_ROOT).href,
+  new URL('riseo-touch-icon.png', APP_ROOT).href,
 ]
 
 self.addEventListener('install', (event) => {
@@ -15,7 +15,7 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(caches.keys().then((keys) => Promise.all(
-    keys.filter((key) => key.startsWith('evergrow-shell-') && key !== CACHE_NAME).map((key) => caches.delete(key)),
+    keys.filter((key) => /^(evergrow|riseo)-shell-/.test(key) && key !== CACHE_NAME).map((key) => caches.delete(key)),
   )).then(() => self.clients.claim()))
 })
 

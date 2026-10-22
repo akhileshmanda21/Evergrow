@@ -1,4 +1,4 @@
-# Evergrow
+# Riseo
 
 A local-first personal habit tracker built with React, Vite, IndexedDB, date-fns, Lucide, and Recharts. Records stay in this browser and are not cloud-synchronized.
 
@@ -11,7 +11,7 @@ npm run dev
 
 ## Install on a Phone
 
-Evergrow is designed for iOS Safari and Android Chrome. Deploy it over HTTPS to enable installation and offline app-shell caching. Localhost is accepted for previewing; the development server intentionally skips service-worker registration so Vite hot reload is not cached.
+Riseo is designed for iOS Safari and Android Chrome. Deploy it over HTTPS to enable installation and offline app-shell caching. Localhost is accepted for previewing; the development server intentionally skips service-worker registration so Vite hot reload is not cached.
 
 - iPhone/iPad: open the site in Safari, tap Share, then choose **Add to Home Screen**.
 - Android: open the site in Chrome, open the browser menu, then choose **Install app** or **Add to Home screen**.

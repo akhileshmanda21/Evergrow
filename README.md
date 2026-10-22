@@ -1,14 +1,15 @@
-# Evergrow
+# Riseo
 
 **Small habits. Consistent progress.**
 
-Evergrow is a mobile-first habit tracker for building routines, reviewing progress, and recovering from missed days. It runs in the browser and can be installed on iOS and Android as a progressive web app.
+Riseo is a mobile-first habit tracker for building routines, reviewing progress, and recovering from missed days. It runs in the browser and can be installed on iOS and Android as a progressive web app.
 
 ## Features
 
 - Create habits with daily, weekday, or selected-day schedules.
 - Check off or excuse scheduled habits.
 - Review streaks, completion rates, calendar history, and trends.
+- View the daily completion ring and 12-week activity heatmap, both derived from saved check-ins.
 - Recover missed check-ins within the configured recovery window.
 - Earn XP, progress through levels, and define personal rewards.
 - Export and restore your data as a JSON backup.
@@ -16,7 +17,7 @@ Evergrow is a mobile-first habit tracker for building routines, reviewing progre
 
 ## Run Locally
 
-Requires Node.js 18 or newer.
+Requires Node.js 20.19+, 22.13+, or 24+.
 
 ```sh
 npm install
@@ -27,7 +28,7 @@ Open the local URL printed by Vite.
 
 ## Install on iOS and Android
 
-Evergrow is designed for mobile browsers and supports home-screen installation.
+Riseo is designed for mobile browsers and supports home-screen installation.
 
 - **iPhone or iPad:** Open the deployed site in Safari, tap **Share**, then **Add to Home Screen**.
 - **Android:** Open the deployed site in Chrome, open the browser menu, then choose **Install app** or **Add to Home screen**.
@@ -59,11 +60,13 @@ The service worker caches the app shell for offline loading after the first succ
 ## Tests and Production Build
 
 ```sh
+npm run lint
+npm run format:check
 npm test
 npm run build
 ```
 
-Every push to `main` runs the GitHub Pages workflow, which runs tests, builds the app for the `/Evergrow/` project path, and deploys `dist/`.
+Every push to `main` runs the GitHub Pages workflow, which runs tests, builds the app for the `/Evergrow/` repository path, and deploys `dist/`.
 
 The site will be available at [https://akhileshmanda21.github.io/Evergrow/](https://akhileshmanda21.github.io/Evergrow/) after the workflow succeeds. In the repository's **Settings > Pages**, select **GitHub Actions** as the build and deployment source if it is not already selected.
 
@@ -72,3 +75,7 @@ For a manual static deployment, run `npm run build` and deploy the generated `di
 ## Technology
 
 React, Vite, JavaScript, IndexedDB, date-fns, Lucide React, Recharts, Vitest, and React Testing Library.
+
+## License
+
+Riseo is available under the [MIT License](LICENSE).

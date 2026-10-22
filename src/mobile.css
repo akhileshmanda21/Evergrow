@@ -1,4 +1,4 @@
-/* Evergrow is a phone-first app; keep the same navigation model at every width. */
+/* Riseo is a phone-first app; keep the same navigation model at every width. */
 :root {
   color-scheme: light;
   -webkit-text-size-adjust: 100%;
@@ -277,6 +277,53 @@ body {
 .storage-alert {
   margin-right: 14px;
   margin-left: 14px;
+}
+
+.page-subtitle,
+.date-current,
+.date-hint,
+.stat-top,
+.stat-detail,
+.panel-heading p,
+.empty-state p,
+.check-habit-copy span,
+.complete-banner,
+.recovery-empty,
+.recovery-row strong,
+.recovery-row small,
+.toolbar-count,
+.manage-main p,
+.settings-control-row strong,
+.settings-info span {
+  font-size: 14px;
+}
+
+.eyebrow,
+.field-label,
+.schedule-field legend,
+.calendar-toolbar p,
+.section-title-row p,
+.chart-header p {
+  font-size: 12px;
+}
+
+.check-habit-copy strong {
+  font-size: 16px;
+}
+
+.nav-item {
+  font-size: 10px;
+}
+
+.button,
+.text-button,
+.settings-control-row select {
+  font-size: 14px;
+}
+
+.settings-control-row span,
+.settings-info span {
+  line-height: 1.5;
 }
 
 @media (max-width: 360px) {

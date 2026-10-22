@@ -1,4 +1,4 @@
-name: Deploy Evergrow to GitHub Pages
+name: Deploy Riseo to GitHub Pages
 
 on:
   push:
