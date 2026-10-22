@@ -63,7 +63,11 @@ npm test
 npm run build
 ```
 
-The production files are generated in `dist/`. Deploy that directory to any static host that supports HTTPS.
+Every push to `main` runs the GitHub Pages workflow, which runs tests, builds the app for the `/Evergrow/` project path, and deploys `dist/`.
+
+The site will be available at [https://akhileshmanda21.github.io/Evergrow/](https://akhileshmanda21.github.io/Evergrow/) after the workflow succeeds. In the repository's **Settings > Pages**, select **GitHub Actions** as the build and deployment source if it is not already selected.
+
+For a manual static deployment, run `npm run build` and deploy the generated `dist/` directory to an HTTPS host.
 
 ## Technology
 

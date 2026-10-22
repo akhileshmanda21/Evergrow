@@ -1,11 +1,12 @@
 const CACHE_NAME = 'evergrow-shell-v1'
+const APP_ROOT = new URL('.', self.location.href).href
 const SHELL_FILES = [
-  '/',
-  '/manifest.webmanifest',
-  '/evergrow-icon.svg',
-  '/evergrow-192.png',
-  '/evergrow-512.png',
-  '/apple-touch-icon.png',
+  APP_ROOT,
+  new URL('manifest.webmanifest', APP_ROOT).href,
+  new URL('evergrow-icon.svg', APP_ROOT).href,
+  new URL('evergrow-192.png', APP_ROOT).href,
+  new URL('evergrow-512.png', APP_ROOT).href,
+  new URL('apple-touch-icon.png', APP_ROOT).href,
 ]
 
 self.addEventListener('install', (event) => {
@@ -24,9 +25,9 @@ self.addEventListener('fetch', (event) => {
 
   if (request.mode === 'navigate') {
     event.respondWith(fetch(request).then(async (response) => {
-      await caches.open(CACHE_NAME).then((cache) => cache.put('/', response.clone()))
+      await caches.open(CACHE_NAME).then((cache) => cache.put(APP_ROOT, response.clone()))
       return response
-    }).catch(() => caches.match('/')))
+    }).catch(() => caches.match(APP_ROOT)))
     return
   }
 

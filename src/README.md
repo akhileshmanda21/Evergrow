@@ -39,4 +39,6 @@ Use Settings to export a JSON backup regularly. Clearing browser site data remov
 
 ## Deployment
 
-Run `npm run build`, then serve the generated `dist/` directory from any static web host. No server or API is required for core use. Browser storage remains local to each browser and origin.
+Push to `main` to run the GitHub Pages deployment workflow. In repository Settings > Pages, select **GitHub Actions** as the build and deployment source if it is not already enabled. The site is published at `https://akhileshmanda21.github.io/Evergrow/` after the workflow succeeds.
+
+For a manual static deployment, run `npm run build` and serve the generated `dist/` directory. No server or API is required for core use. Browser storage remains local to each browser and origin.
